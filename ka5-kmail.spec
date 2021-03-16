@@ -1,15 +1,15 @@
-%define		kdeappsver	19.04.1
+%define		kdeappsver	20.12.3
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		kmail
 Summary:	kmail
 Name:		ka5-%{kaname}
-Version:	19.04.1
+Version:	20.12.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
-Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	aaef555dd6a8958c4737cc2851f20811
+Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	4a0d5d3fa1885fab8b477cccd94cdb59
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel
@@ -30,10 +30,7 @@ BuildRequires:	ka5-akonadi-contacts-devel >= %{kdeappsver}
 BuildRequires:	ka5-akonadi-devel >= %{kdeappsver}
 BuildRequires:	ka5-akonadi-mime-devel >= %{kdeappsver}
 BuildRequires:	ka5-akonadi-search-devel >= %{kdeappsver}
-BuildRequires:	ka5-kcalcore-devel >= %{kdeappsver}
 BuildRequires:	ka5-kcalutils-devel >= %{kdeappsver}
-BuildRequires:	ka5-kcontacts-devel >= %{kdeappsver}
-BuildRequires:	ka5-kdepim-apps-libs-devel >= %{kdeappsver}
 BuildRequires:	ka5-kidentitymanagement-devel >= %{kdeappsver}
 BuildRequires:	ka5-kldap-devel >= %{kdeappsver}
 BuildRequires:	ka5-kmailtransport-devel >= %{kdeappsver}
@@ -51,10 +48,12 @@ BuildRequires:	ka5-messagelib-devel >= %{kdeappsver}
 BuildRequires:	ka5-pimcommon-devel >= %{kdeappsver}
 BuildRequires:	kf5-extra-cmake-modules >= %{kframever}
 BuildRequires:	kf5-kbookmarks-devel >= %{kframever}
+BuildRequires:	kf5-kcalendarcore-devel >= %{kframever}
 BuildRequires:	kf5-kcmutils-devel >= %{kframever}
 BuildRequires:	kf5-kcodecs-devel >= %{kframever}
 BuildRequires:	kf5-kconfig-devel >= %{kframever}
 BuildRequires:	kf5-kconfigwidgets-devel >= %{kframever}
+BuildRequires:	kf5-kcontacts-devel >= %{kframever}
 BuildRequires:	kf5-kcrash-devel >= %{kframever}
 BuildRequires:	kf5-kdbusaddons-devel >= %{kframever}
 BuildRequires:	kf5-kdoctools-devel >= %{kframever}
@@ -117,10 +116,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-/etc/xdg/kmail.categories
-/etc/xdg/kmail.renamecategories
-/etc/xdg/ktnefapps.categories
-/etc/xdg/ktnefapps.renamecategories
 %attr(755,root,root) %{_bindir}/akonadi_archivemail_agent
 %attr(755,root,root) %{_bindir}/akonadi_followupreminder_agent
 %attr(755,root,root) %{_bindir}/akonadi_mailfilter_agent
@@ -134,8 +129,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt5/plugins/kcm_kmailsummary.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kcm_kontactsummary.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kmailpart.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/kontact_kmailplugin.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/kontact_summaryplugin.so
 %dir %{_libdir}/qt5/plugins/akonadi/config
 %attr(755,root,root) %{_libdir}/qt5/plugins/akonadi/config/archivemailagentconfig.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/akonadi/config/followupreminderagentconfig.so
@@ -201,6 +194,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kconf_update/kmail.upd
 %attr(755,root,root) %{_datadir}/kconf_update/kmail2.sh
 %{_datadir}/kconf_update/kmail2.upd
+%dir %{_datadir}/kmail2
+%dir %{_datadir}/kmail2/pics
 %{_datadir}/kmail2/pics/pgp-keys.png
 %{_datadir}/knotifications5/akonadi_archivemail_agent.notifyrc
 %{_datadir}/knotifications5/akonadi_followupreminder_agent.notifyrc
@@ -219,6 +214,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kservices5/kmail_config_security.desktop
 %{_datadir}/kservices5/kontact/kmailplugin.desktop
 %{_datadir}/kservices5/kontact/summaryplugin.desktop
-%{_datadir}/kservicetypes5/dbusmail.desktop
 %{_datadir}/kxmlgui5/kontactsummary
 %{_datadir}/metainfo/org.kde.kmail2.appdata.xml
+%attr(755,root,root) %{_bindir}/kmail-refresh-settings
+%{_desktopdir}/org.kde.kmail-refresh-settings.desktop
+%{_datadir}/dbus-1/services/org.kde.kmail.service
+%{_datadir}/qlogging-categories5/kmail.categories
+%{_datadir}/qlogging-categories5/kmail.renamecategories
+%attr(755,root,root) %{_libdir}/qt5/plugins/kontact5/kontact_kmailplugin.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kontact5/kontact_summaryplugin.so
