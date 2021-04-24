@@ -1,15 +1,15 @@
-%define		kdeappsver	20.12.3
+%define		kdeappsver	21.04.0
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		kmail
 Summary:	kmail
 Name:		ka5-%{kaname}
-Version:	20.12.3
+Version:	21.04.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	4a0d5d3fa1885fab8b477cccd94cdb59
+# Source0-md5:	be2b1fa4126a9bbb6e151969cb9e1c0b
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel
@@ -223,3 +223,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/qlogging-categories5/kmail.renamecategories
 %attr(755,root,root) %{_libdir}/qt5/plugins/kontact5/kontact_kmailplugin.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kontact5/kontact_summaryplugin.so
+%attr(755,root,root) %{_bindir}/akonadi_mailmerge_agent
+%{_datadir}/akonadi/agents/mailmergeagent.desktop
+%{_datadir}/knotifications5/akonadi_mailmerge_agent.notifyrc
