@@ -1,15 +1,15 @@
-%define		kdeappsver	21.04.0
+%define		kdeappsver	21.04.1
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		kmail
 Summary:	kmail
 Name:		ka5-%{kaname}
-Version:	21.04.0
+Version:	21.04.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	be2b1fa4126a9bbb6e151969cb9e1c0b
+# Source0-md5:	194eb852e781620f983217e6d0a5f988
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel
@@ -123,7 +123,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/akonadi_unifiedmailbox_agent
 %attr(755,root,root) %{_bindir}/kmail
 %attr(755,root,root) %{_bindir}/ktnef
-%attr(755,root,root) %ghost %{_libdir}/libkmailprivate.so.5
+%ghost %{_libdir}/libkmailprivate.so.5
 %attr(755,root,root) %{_libdir}/libkmailprivate.so.5.*.*
 %attr(755,root,root) %{_libdir}/qt5/plugins/kcm_kmail.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kcm_kmailsummary.so
