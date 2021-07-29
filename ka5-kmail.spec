@@ -84,6 +84,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 KMail is the email component of Kontact, the integrated personal
 information manager from KDE.
 
+%description -l pl.UTF-8
+KMail jest komponentem poczty Kontaktu, zintegrowanego menadżera
+informacji osobistej dla KDE.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
