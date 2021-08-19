@@ -1,15 +1,15 @@
-%define		kdeappsver	21.04.3
+%define		kdeappsver	21.08.0
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		kmail
 Summary:	kmail
 Name:		ka5-%{kaname}
-Version:	21.04.3
+Version:	21.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	d408e0e47718b51f19a90d47f7408573
+# Source0-md5:	462bae35908af52089403bd6806302a2
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel
@@ -129,9 +129,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/ktnef
 %ghost %{_libdir}/libkmailprivate.so.5
 %attr(755,root,root) %{_libdir}/libkmailprivate.so.5.*.*
-%attr(755,root,root) %{_libdir}/qt5/plugins/kcm_kmail.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/kcm_kmailsummary.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/kcm_kontactsummary.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kmailpart.so
 %dir %{_libdir}/qt5/plugins/akonadi/config
 %attr(755,root,root) %{_libdir}/qt5/plugins/akonadi/config/archivemailagentconfig.so
@@ -230,3 +227,13 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/akonadi_mailmerge_agent
 %{_datadir}/akonadi/agents/mailmergeagent.desktop
 %{_datadir}/knotifications5/akonadi_mailmerge_agent.notifyrc
+%dir %{_libdir}/qt5/plugins/pim/kcms/kmail
+%{_libdir}/qt5/plugins/pim/kcms/kmail/kcm_kmail_accounts.so
+%{_libdir}/qt5/plugins/pim/kcms/kmail/kcm_kmail_appearance.so
+%{_libdir}/qt5/plugins/pim/kcms/kmail/kcm_kmail_composer.so
+%{_libdir}/qt5/plugins/pim/kcms/kmail/kcm_kmail_misc.so
+%{_libdir}/qt5/plugins/pim/kcms/kmail/kcm_kmail_plugins.so
+%{_libdir}/qt5/plugins/pim/kcms/kmail/kcm_kmail_security.so
+%dir %{_libdir}/qt5/plugins/pim/kcms/summary
+%{_libdir}/qt5/plugins/pim/kcms/summary/kcmkmailsummary.so
+%{_libdir}/qt5/plugins/pim/kcms/summary/kcmkontactsummary.so
