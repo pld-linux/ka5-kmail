@@ -1,15 +1,15 @@
-%define		kdeappsver	21.08.3
+%define		kdeappsver	21.12.0
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		kmail
 Summary:	kmail
 Name:		ka5-%{kaname}
-Version:	21.08.3
+Version:	21.12.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	ae6d6b0a6e48218d410a00cc74b5ef6d
+# Source0-md5:	8e11fa738b9868774eafbf839039abdf
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel
@@ -191,10 +191,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/8x8/emblems/gpg-key-trust-level-3.svg
 %{_iconsdir}/hicolor/8x8/emblems/gpg-key-trust-level-4.svg
 %{_iconsdir}/hicolor/scalable/apps/kmail.svg
-%attr(755,root,root) %{_datadir}/kconf_update/kmail-15.08-kickoff.sh
-%{_datadir}/kconf_update/kmail.upd
-%attr(755,root,root) %{_datadir}/kconf_update/kmail2.sh
-%{_datadir}/kconf_update/kmail2.upd
 %dir %{_datadir}/kmail2
 %dir %{_datadir}/kmail2/pics
 %{_datadir}/kmail2/pics/pgp-keys.png
@@ -203,8 +199,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/knotifications5/akonadi_mailfilter_agent.notifyrc
 %{_datadir}/knotifications5/akonadi_sendlater_agent.notifyrc
 %{_datadir}/knotifications5/kmail2.notifyrc
-%{_datadir}/kontact/ksettingsdialog/kmail.setdlg
-%{_datadir}/kontact/ksettingsdialog/summary.setdlg
 %{_datadir}/kservices5/kcmkmailsummary.desktop
 %{_datadir}/kservices5/kcmkontactsummary.desktop
 %{_datadir}/kservices5/kmail_config_accounts.desktop
