@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	21.12.3
+%define		kdeappsver	22.04.0
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		kmail
 Summary:	kmail
 Name:		ka5-%{kaname}
-Version:	21.12.3
+Version:	22.04.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	8b3463193581946b75e9d4dafe648bfa
+# Source0-md5:	45b75d355420cfa0befd4df96723e8fb
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel
@@ -208,16 +208,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/knotifications5/akonadi_mailfilter_agent.notifyrc
 %{_datadir}/knotifications5/akonadi_sendlater_agent.notifyrc
 %{_datadir}/knotifications5/kmail2.notifyrc
-%{_datadir}/kservices5/kcmkmailsummary.desktop
-%{_datadir}/kservices5/kcmkontactsummary.desktop
-%{_datadir}/kservices5/kmail_config_accounts.desktop
-%{_datadir}/kservices5/kmail_config_appearance.desktop
-%{_datadir}/kservices5/kmail_config_composer.desktop
-%{_datadir}/kservices5/kmail_config_misc.desktop
-%{_datadir}/kservices5/kmail_config_plugins.desktop
-%{_datadir}/kservices5/kmail_config_security.desktop
-%{_datadir}/kservices5/kontact/kmailplugin.desktop
-%{_datadir}/kservices5/kontact/summaryplugin.desktop
 %{_datadir}/kxmlgui5/kontactsummary
 %{_datadir}/metainfo/org.kde.kmail2.appdata.xml
 %attr(755,root,root) %{_bindir}/kmail-refresh-settings
