@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	22.04.3
+%define		kdeappsver	22.08.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kmail
 Summary:	kmail
 Name:		ka5-%{kaname}
-Version:	22.04.3
+Version:	22.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	ec3c115dda4d8a11251d04da9ce76f1d
+# Source0-md5:	7510eb8a31cfc27cf0ec723e873b01ce
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel
@@ -140,9 +140,6 @@ rm -rf $RPM_BUILD_ROOT
 %ghost %{_libdir}/libkmailprivate.so.5
 %attr(755,root,root) %{_libdir}/libkmailprivate.so.5.*.*
 %attr(755,root,root) %{_libdir}/qt5/plugins/kmailpart.so
-%dir %{_libdir}/qt5/plugins/akonadi/config
-%attr(755,root,root) %{_libdir}/qt5/plugins/akonadi/config/archivemailagentconfig.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/akonadi/config/followupreminderagentconfig.so
 %{_datadir}/akonadi/agents/archivemailagent.desktop
 %{_datadir}/akonadi/agents/followupreminder.desktop
 %{_datadir}/akonadi/agents/mailfilteragent.desktop
@@ -216,18 +213,20 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/dbus-1/services/org.kde.kmail.service
 %{_datadir}/qlogging-categories5/kmail.categories
 %{_datadir}/qlogging-categories5/kmail.renamecategories
-%attr(755,root,root) %{_libdir}/qt5/plugins/kontact5/kontact_kmailplugin.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/kontact5/kontact_summaryplugin.so
 %attr(755,root,root) %{_bindir}/akonadi_mailmerge_agent
 %{_datadir}/akonadi/agents/mailmergeagent.desktop
 %{_datadir}/knotifications5/akonadi_mailmerge_agent.notifyrc
-%dir %{_libdir}/qt5/plugins/pim/kcms/kmail
-%{_libdir}/qt5/plugins/pim/kcms/kmail/kcm_kmail_accounts.so
-%{_libdir}/qt5/plugins/pim/kcms/kmail/kcm_kmail_appearance.so
-%{_libdir}/qt5/plugins/pim/kcms/kmail/kcm_kmail_composer.so
-%{_libdir}/qt5/plugins/pim/kcms/kmail/kcm_kmail_misc.so
-%{_libdir}/qt5/plugins/pim/kcms/kmail/kcm_kmail_plugins.so
-%{_libdir}/qt5/plugins/pim/kcms/kmail/kcm_kmail_security.so
-%dir %{_libdir}/qt5/plugins/pim/kcms/summary
-%{_libdir}/qt5/plugins/pim/kcms/summary/kcmkmailsummary.so
-%{_libdir}/qt5/plugins/pim/kcms/summary/kcmkontactsummary.so
+%{_libdir}/qt5/plugins/pim5/akonadi/config/archivemailagentconfig.so
+%{_libdir}/qt5/plugins/pim5/akonadi/config/followupreminderagentconfig.so
+%dir %{_libdir}/qt5/plugins/pim5/kcms/kmail
+%{_libdir}/qt5/plugins/pim5/kcms/kmail/kcm_kmail_accounts.so
+%{_libdir}/qt5/plugins/pim5/kcms/kmail/kcm_kmail_appearance.so
+%{_libdir}/qt5/plugins/pim5/kcms/kmail/kcm_kmail_composer.so
+%{_libdir}/qt5/plugins/pim5/kcms/kmail/kcm_kmail_misc.so
+%{_libdir}/qt5/plugins/pim5/kcms/kmail/kcm_kmail_plugins.so
+%{_libdir}/qt5/plugins/pim5/kcms/kmail/kcm_kmail_security.so
+%dir %{_libdir}/qt5/plugins/pim5/kcms/summary
+%{_libdir}/qt5/plugins/pim5/kcms/summary/kcmkmailsummary.so
+%{_libdir}/qt5/plugins/pim5/kcms/summary/kcmkontactsummary.so
+%{_libdir}/qt5/plugins/pim5/kontact/kontact_kmailplugin.so
+%{_libdir}/qt5/plugins/pim5/kontact/kontact_summaryplugin.so
