@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	23.08.2
+%define		kdeappsver	23.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kmail
 Summary:	kmail
 Name:		ka5-%{kaname}
-Version:	23.08.2
+Version:	23.08.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	0006e3ac73c9a46c9e7e5bc5d6cc4e51
+# Source0-md5:	e819040c52d2a3b102f154c055dd1209
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel
