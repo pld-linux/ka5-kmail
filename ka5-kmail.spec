@@ -1,31 +1,31 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	23.08.4
+%define		kdeappsver	24.01.95
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kmail
 Summary:	kmail
 Name:		ka5-%{kaname}
-Version:	23.08.4
-Release:	1
+Version:	24.01.95
+Release:	0.1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
-Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	876be1aa7eb1f22aff642466734177bc
+Source0:	https://download.kde.org/unstable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	ba617762f8ce357f488b6bd1e38a122a
 URL:		http://www.kde.org/
-BuildRequires:	Qt5Core-devel >= %{qtver}
-BuildRequires:	Qt5DBus-devel
-BuildRequires:	Qt5Gui-devel
-BuildRequires:	Qt5Network-devel
-BuildRequires:	Qt5Positioning-devel >= 5.11.1
-BuildRequires:	Qt5PrintSupport-devel >= 5.11.1
-BuildRequires:	Qt5Qml-devel >= 5.11.1
-BuildRequires:	Qt5Quick-devel >= 5.11.1
-BuildRequires:	Qt5Test-devel
-BuildRequires:	Qt5WebChannel-devel >= 5.11.1
-BuildRequires:	Qt5WebEngine-devel >= 5.11.1
-BuildRequires:	Qt5Widgets-devel
+BuildRequires:	Qt6Core-devel >= %{qtver}
+BuildRequires:	Qt6DBus-devel
+BuildRequires:	Qt6Gui-devel
+BuildRequires:	Qt6Network-devel
+BuildRequires:	Qt6Positioning-devel >= 5.11.1
+BuildRequires:	Qt6PrintSupport-devel >= 5.11.1
+BuildRequires:	Qt6Qml-devel >= 5.11.1
+BuildRequires:	Qt6Quick-devel >= 5.11.1
+BuildRequires:	Qt6Test-devel
+BuildRequires:	Qt6WebChannel-devel >= 5.11.1
+BuildRequires:	Qt6WebEngine-devel >= 5.11.1
+BuildRequires:	Qt6Widgets-devel
 BuildRequires:	cmake >= 3.20
 BuildRequires:	gettext-devel
 BuildRequires:	gpgme-c++-devel >= 1.8.0
@@ -49,34 +49,34 @@ BuildRequires:	ka5-mailcommon-devel >= %{kdeappsver}
 BuildRequires:	ka5-messagelib-devel >= %{kdeappsver}
 BuildRequires:	ka5-messagelib-devel >= %{kdeappsver}
 BuildRequires:	ka5-pimcommon-devel >= %{kdeappsver}
-BuildRequires:	kf5-extra-cmake-modules >= %{kframever}
-BuildRequires:	kf5-kbookmarks-devel >= %{kframever}
-BuildRequires:	kf5-kcalendarcore-devel >= %{kframever}
-BuildRequires:	kf5-kcmutils-devel >= %{kframever}
-BuildRequires:	kf5-kcodecs-devel >= %{kframever}
-BuildRequires:	kf5-kconfig-devel >= %{kframever}
-BuildRequires:	kf5-kconfigwidgets-devel >= %{kframever}
-BuildRequires:	kf5-kcontacts-devel >= %{kframever}
-BuildRequires:	kf5-kcrash-devel >= %{kframever}
-BuildRequires:	kf5-kdbusaddons-devel >= %{kframever}
-BuildRequires:	kf5-kdoctools-devel >= %{kframever}
-BuildRequires:	kf5-kguiaddons-devel >= %{kframever}
-BuildRequires:	kf5-ki18n-devel >= %{kframever}
-BuildRequires:	kf5-kiconthemes-devel >= %{kframever}
-BuildRequires:	kf5-kio-devel >= %{kframever}
-BuildRequires:	kf5-kitemviews-devel >= %{kframever}
-BuildRequires:	kf5-kjobwidgets-devel >= %{kframever}
-BuildRequires:	kf5-knotifications-devel >= %{kframever}
-BuildRequires:	kf5-knotifyconfig-devel >= %{kframever}
-BuildRequires:	kf5-kparts-devel >= %{kframever}
-BuildRequires:	kf5-kservice-devel >= %{kframever}
-BuildRequires:	kf5-ktextwidgets-devel >= %{kframever}
-BuildRequires:	kf5-kwidgetsaddons-devel >= %{kframever}
-BuildRequires:	kf5-kwindowsystem-devel >= %{kframever}
-BuildRequires:	kf5-kxmlgui-devel >= %{kframever}
-BuildRequires:	kf5-sonnet-devel >= %{kframever}
+BuildRequires:	kf6-extra-cmake-modules >= %{kframever}
+BuildRequires:	kf6-kbookmarks-devel >= %{kframever}
+BuildRequires:	kf6-kcalendarcore-devel >= %{kframever}
+BuildRequires:	kf6-kcmutils-devel >= %{kframever}
+BuildRequires:	kf6-kcodecs-devel >= %{kframever}
+BuildRequires:	kf6-kconfig-devel >= %{kframever}
+BuildRequires:	kf6-kconfigwidgets-devel >= %{kframever}
+BuildRequires:	kf6-kcontacts-devel >= %{kframever}
+BuildRequires:	kf6-kcrash-devel >= %{kframever}
+BuildRequires:	kf6-kdbusaddons-devel >= %{kframever}
+BuildRequires:	kf6-kdoctools-devel >= %{kframever}
+BuildRequires:	kf6-kguiaddons-devel >= %{kframever}
+BuildRequires:	kf6-ki18n-devel >= %{kframever}
+BuildRequires:	kf6-kiconthemes-devel >= %{kframever}
+BuildRequires:	kf6-kio-devel >= %{kframever}
+BuildRequires:	kf6-kitemviews-devel >= %{kframever}
+BuildRequires:	kf6-kjobwidgets-devel >= %{kframever}
+BuildRequires:	kf6-knotifications-devel >= %{kframever}
+BuildRequires:	kf6-knotifyconfig-devel >= %{kframever}
+BuildRequires:	kf6-kparts-devel >= %{kframever}
+BuildRequires:	kf6-kservice-devel >= %{kframever}
+BuildRequires:	kf6-ktextwidgets-devel >= %{kframever}
+BuildRequires:	kf6-kwidgetsaddons-devel >= %{kframever}
+BuildRequires:	kf6-kwindowsystem-devel >= %{kframever}
+BuildRequires:	kf6-kxmlgui-devel >= %{kframever}
+BuildRequires:	kf6-sonnet-devel >= %{kframever}
 BuildRequires:	ninja
-BuildRequires:	qt5-build >= %{qtver}
+BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	shared-mime-info
 BuildRequires:	tar >= 1:1.22
@@ -131,100 +131,57 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/akonadi_archivemail_agent
 %attr(755,root,root) %{_bindir}/akonadi_followupreminder_agent
 %attr(755,root,root) %{_bindir}/akonadi_mailfilter_agent
+%attr(755,root,root) %{_bindir}/akonadi_mailmerge_agent
 %attr(755,root,root) %{_bindir}/akonadi_sendlater_agent
 %attr(755,root,root) %{_bindir}/akonadi_unifiedmailbox_agent
 %attr(755,root,root) %{_bindir}/kmail
+%attr(755,root,root) %{_bindir}/kmail-refresh-settings
 %attr(755,root,root) %{_bindir}/ktnef
-%ghost %{_libdir}/libkmailprivate.so.5
-%attr(755,root,root) %{_libdir}/libkmailprivate.so.5.*.*
-%attr(755,root,root) %{_libdir}/qt5/plugins/kmailpart.so
+%attr(755,root,root) %{_libdir}/libkmailprivate.so.*.*
+%ghost %{_libdir}/libkmailprivate.so.6
+%attr(755,root,root) %{_libdir}/libmailfilteragentprivate.so.*.*
+%ghost %{_libdir}/libmailfilteragentprivate.so.6
+%attr(755,root,root) %{_libdir}/qt6/plugins/kmailpart.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/akonadi/config/archivemailagentconfig.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/akonadi/config/followupreminderagentconfig.so
+%dir %{_libdir}/qt6/plugins/pim6/kcms/kmail
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/kmail/kcm_kmail_accounts.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/kmail/kcm_kmail_appearance.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/kmail/kcm_kmail_composer.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/kmail/kcm_kmail_misc.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/kmail/kcm_kmail_plugins.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/kmail/kcm_kmail_security.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/summary/kcmkmailsummary.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/summary/kcmkontactsummary.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kontact/kontact_kmailplugin.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kontact/kontact_summaryplugin.so
 %{_datadir}/akonadi/agents/archivemailagent.desktop
 %{_datadir}/akonadi/agents/followupreminder.desktop
 %{_datadir}/akonadi/agents/mailfilteragent.desktop
+%{_datadir}/akonadi/agents/mailmergeagent.desktop
 %{_datadir}/akonadi/agents/sendlateragent.desktop
 %{_datadir}/akonadi/agents/unifiedmailboxagent.desktop
 %{_desktopdir}/kmail_view.desktop
+%{_desktopdir}/org.kde.kmail-refresh-settings.desktop
 %{_desktopdir}/org.kde.kmail2.desktop
 %{_desktopdir}/org.kde.ktnef.desktop
 %{_datadir}/config.kcfg/archivemailagentsettings.kcfg
 %{_datadir}/config.kcfg/kmail.kcfg
 %{_datadir}/dbus-1/interfaces/org.kde.kmail.kmail.xml
 %{_datadir}/dbus-1/interfaces/org.kde.kmail.kmailpart.xml
-%dir %{_iconsdir}/breeze-dark/16x16
-%dir %{_iconsdir}/breeze-dark/16x16/emblems
-%{_iconsdir}/breeze-dark/16x16/emblems/gpg-key-trust-level-0.svg
-%{_iconsdir}/breeze-dark/16x16/emblems/gpg-key-trust-level-1.svg
-%{_iconsdir}/breeze-dark/16x16/emblems/gpg-key-trust-level-2.svg
-%{_iconsdir}/breeze-dark/16x16/emblems/gpg-key-trust-level-3.svg
-%{_iconsdir}/breeze-dark/16x16/emblems/gpg-key-trust-level-4.svg
-%dir %{_iconsdir}/breeze-dark/22x22
-%dir %{_iconsdir}/breeze-dark/22x22/emblems
-%{_iconsdir}/breeze-dark/22x22/emblems/gpg-key-trust-level-0.svg
-%{_iconsdir}/breeze-dark/22x22/emblems/gpg-key-trust-level-1.svg
-%{_iconsdir}/breeze-dark/22x22/emblems/gpg-key-trust-level-2.svg
-%{_iconsdir}/breeze-dark/22x22/emblems/gpg-key-trust-level-3.svg
-%{_iconsdir}/breeze-dark/22x22/emblems/gpg-key-trust-level-4.svg
-%dir %{_iconsdir}/breeze-dark/8x8
-%dir %{_iconsdir}/breeze-dark/8x8/emblems
-%{_iconsdir}/breeze-dark/8x8/emblems/gpg-key-trust-level-0.svg
-%{_iconsdir}/breeze-dark/8x8/emblems/gpg-key-trust-level-1.svg
-%{_iconsdir}/breeze-dark/8x8/emblems/gpg-key-trust-level-2.svg
-%{_iconsdir}/breeze-dark/8x8/emblems/gpg-key-trust-level-3.svg
-%{_iconsdir}/breeze-dark/8x8/emblems/gpg-key-trust-level-4.svg
-%{_iconsdir}/hicolor/128x128/apps/kmail.png
-%{_iconsdir}/hicolor/16x16/apps/kmail.png
-%{_iconsdir}/hicolor/16x16/emblems/gpg-key-trust-level-0.svg
-%{_iconsdir}/hicolor/16x16/emblems/gpg-key-trust-level-1.svg
-%{_iconsdir}/hicolor/16x16/emblems/gpg-key-trust-level-2.svg
-%{_iconsdir}/hicolor/16x16/emblems/gpg-key-trust-level-3.svg
-%{_iconsdir}/hicolor/16x16/emblems/gpg-key-trust-level-4.svg
-%{_iconsdir}/hicolor/22x22/actions/ktnef_extract_all_to.png
-%{_iconsdir}/hicolor/22x22/actions/ktnef_extract_to.png
-%{_iconsdir}/hicolor/22x22/apps/kmail.png
-%{_iconsdir}/hicolor/22x22/emblems/gpg-key-trust-level-0.svg
-%{_iconsdir}/hicolor/22x22/emblems/gpg-key-trust-level-1.svg
-%{_iconsdir}/hicolor/22x22/emblems/gpg-key-trust-level-2.svg
-%{_iconsdir}/hicolor/22x22/emblems/gpg-key-trust-level-3.svg
-%{_iconsdir}/hicolor/22x22/emblems/gpg-key-trust-level-4.svg
-%{_iconsdir}/hicolor/32x32/apps/kmail.png
-%{_iconsdir}/hicolor/48x48/apps/kmail.png
-%{_iconsdir}/hicolor/48x48/apps/ktnef.png
-%{_iconsdir}/hicolor/64x64/apps/kmail.png
-%{_iconsdir}/hicolor/8x8/emblems/gpg-key-trust-level-0.svg
-%{_iconsdir}/hicolor/8x8/emblems/gpg-key-trust-level-1.svg
-%{_iconsdir}/hicolor/8x8/emblems/gpg-key-trust-level-2.svg
-%{_iconsdir}/hicolor/8x8/emblems/gpg-key-trust-level-3.svg
-%{_iconsdir}/hicolor/8x8/emblems/gpg-key-trust-level-4.svg
-%{_iconsdir}/hicolor/scalable/apps/kmail.svg
-%dir %{_datadir}/kmail2
-%dir %{_datadir}/kmail2/pics
-%{_datadir}/kmail2/pics/pgp-keys.png
-%{_datadir}/knotifications5/akonadi_archivemail_agent.notifyrc
-%{_datadir}/knotifications5/akonadi_followupreminder_agent.notifyrc
-%{_datadir}/knotifications5/akonadi_mailfilter_agent.notifyrc
-%{_datadir}/knotifications5/akonadi_sendlater_agent.notifyrc
-%{_datadir}/knotifications5/kmail2.notifyrc
-%{_datadir}/kxmlgui5/kontactsummary
-%{_datadir}/metainfo/org.kde.kmail2.appdata.xml
-%attr(755,root,root) %{_bindir}/kmail-refresh-settings
-%{_desktopdir}/org.kde.kmail-refresh-settings.desktop
 %{_datadir}/dbus-1/services/org.kde.kmail.service
-%{_datadir}/qlogging-categories5/kmail.categories
-%{_datadir}/qlogging-categories5/kmail.renamecategories
-%attr(755,root,root) %{_bindir}/akonadi_mailmerge_agent
-%{_datadir}/akonadi/agents/mailmergeagent.desktop
-%{_datadir}/knotifications5/akonadi_mailmerge_agent.notifyrc
-%{_libdir}/qt5/plugins/pim5/akonadi/config/archivemailagentconfig.so
-%{_libdir}/qt5/plugins/pim5/akonadi/config/followupreminderagentconfig.so
-%dir %{_libdir}/qt5/plugins/pim5/kcms/kmail
-%{_libdir}/qt5/plugins/pim5/kcms/kmail/kcm_kmail_accounts.so
-%{_libdir}/qt5/plugins/pim5/kcms/kmail/kcm_kmail_appearance.so
-%{_libdir}/qt5/plugins/pim5/kcms/kmail/kcm_kmail_composer.so
-%{_libdir}/qt5/plugins/pim5/kcms/kmail/kcm_kmail_misc.so
-%{_libdir}/qt5/plugins/pim5/kcms/kmail/kcm_kmail_plugins.so
-%{_libdir}/qt5/plugins/pim5/kcms/kmail/kcm_kmail_security.so
-%dir %{_libdir}/qt5/plugins/pim5/kcms/summary
-%{_libdir}/qt5/plugins/pim5/kcms/summary/kcmkmailsummary.so
-%{_libdir}/qt5/plugins/pim5/kcms/summary/kcmkontactsummary.so
-%{_libdir}/qt5/plugins/pim5/kontact/kontact_kmailplugin.so
-%{_libdir}/qt5/plugins/pim5/kontact/kontact_summaryplugin.so
+%{_iconsdir}/breeze-dark/*x*/emblems/*.svg
+%{_iconsdir}/hicolor/*x*/apps/*.png
+%{_iconsdir}/hicolor/*x*/emblems/*.svg
+%{_iconsdir}/hicolor/*x*/actions/*.png
+%{_iconsdir}/hicolor/scalable/apps/kmail.svg
+%{_datadir}/kmail2/pics/pgp-keys.png
+%{_datadir}/knotifications6/akonadi_archivemail_agent.notifyrc
+%{_datadir}/knotifications6/akonadi_followupreminder_agent.notifyrc
+%{_datadir}/knotifications6/akonadi_mailfilter_agent.notifyrc
+%{_datadir}/knotifications6/akonadi_mailmerge_agent.notifyrc
+%{_datadir}/knotifications6/akonadi_sendlater_agent.notifyrc
+%{_datadir}/knotifications6/kmail2.notifyrc
+%{_datadir}/metainfo/org.kde.kmail2.appdata.xml
+%{_datadir}/qlogging-categories6/kmail.categories
+%{_datadir}/qlogging-categories6/kmail.renamecategories
