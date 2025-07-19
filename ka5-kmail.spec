@@ -28,7 +28,7 @@ BuildRequires:	Qt5WebEngine-devel >= 5.11.1
 BuildRequires:	Qt5Widgets-devel
 BuildRequires:	cmake >= 3.20
 BuildRequires:	gettext-devel
-BuildRequires:	gpgme-c++-devel >= 1.8.0
+BuildRequires:	gpgmepp-devel >= 1.8.0
 BuildRequires:	ka5-akonadi-contacts-devel >= %{kdeappsver}
 BuildRequires:	ka5-akonadi-devel >= %{kdeappsver}
 BuildRequires:	ka5-akonadi-mime-devel >= %{kdeappsver}
